@@ -5,15 +5,17 @@
  * @description A bright, Y2K-lite inspired theme for Discord. Tested with Vencord.
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+
 :root {
     /* customizable variables */
 
     /* fonts */
     --default-font: gg sans, sans-serif;
-    --big-font: Bebas Neue Pro, serif;
+    --big-font: Sofia Sans Extra Condensed, sans-serif;
 
-    --weight-regular:600;
-    --weight-bold:1000;
+    --weight-regular:400;
+    --weight-bold:800;
     --weight-thin:200;
 
     /* colors */
@@ -37,6 +39,19 @@
     --shadow-color: rgb(0, 0, 0);
     --shadow-color-active: rgb(255, 255, 255);
 
+    /* font adjustments */
+    --username-offset:0px;
+    --username-fontsize:24px;
+    --username-weight:var(--weight-bold);
+
+    --date-y-offset:-2px;
+    --date-x-offset:0px;
+    --date-fontsize:12px;
+    --date-weight:var(--weight-bold);
+
+    --cerry-italic:italic; /* unfortunately unused */
+
+
 
     /*--backdrop:url("https://i.imgur.com/ZETJdNW.png");*/
     --backdrop:linear-gradient(135deg, rgba(187,60,123,1) 0%, rgba(47,19,126,1) 100%);
@@ -47,8 +62,6 @@
 
     --default-radius: 20px;
 
-    /* toggle italics */
-    --cerry-italic:italic;
 
 
     /* IMPORTANT VARIABLES */
@@ -204,7 +217,7 @@ CHAT SHIT
     font-family:var(--big-font);
     text-shadow:var(--txtshadow);
     font-size:1.2em;
-    font-weight:1000;
+    font-weight:var(--weight-bold);
     font-style: var(--cerry-italic);
     justify-content: flex-start;
     
@@ -248,12 +261,12 @@ MESSAGES
 .username__0b0e7 {
     font-family:var(--big-font);
     text-shadow: var(--txtshadow);
-    font-size:24px;
-    font-weight:1000;
+    font-size:var(--username-fontsize);
+    font-weight:var(--username-weight);
     font-style: var(--cerry-italic);
     line-height:1em;
     overflow:hidden;
-    top:0px;
+    top:var(--username-offset);
     width:auto;
    
 }
@@ -261,7 +274,7 @@ MESSAGES
 .botText_daff56 {
     font-family:var(--big-font);
     font-size:12px;
-    font-weight:1000;
+    font-weight:var(--weight-bold);
     font-style: var(--cerry-italic);
     text-transform: uppercase;
 
@@ -275,17 +288,17 @@ MESSAGES
 /* timestamp message */
 .cozy_f5c119 .timestamp_c79dd2 {
     font-family:var(--big-font);
-    font-size:15px;
+    font-size:var(--date-fontsize);
     font-style: var(--cerry-italic);
     text-transform: uppercase;
 }
 h3 > .timestamp_c79dd2 {
-        font-family:var(--big-font);
-    font-size:15px;
+    font-family:var(--big-font);
+    font-size:var(--date-fontsize);
     font-style: var(--cerry-italic);
-    text-transform: uppercase;
-    position:absolute;
-    top:2px;
+    text-transform: var(--date-text-transform);
+    position:relative;
+    top:var(--date-y-offset);
 }
 /* chat avatar */
 .avatar__08316 {
@@ -477,6 +490,7 @@ TOP BAR
 .titleWrapper_d6133e  {
 	font-family:var(--big-font);
     text-shadow: var(--txtshadow);
+
 }
 .container__26baa .title__84e16{
     color:#fff;
@@ -486,6 +500,7 @@ TOP BAR
     font-size:32px;
     font-style: var(--cerry-italic);
     padding:0px 4px;
+        font-weight:var(--weight-bold);
 } .icon_ae0b42 {color:var(--main-color)}
 
 /* user dm avatar */
@@ -593,7 +608,7 @@ SERVER SIDEBAR
     font-family: var(--big-font);
     font-style: var(--cerry-italic);
     font-size:18px;
-    font-weight:400;
+    font-weight:var(--weight-regular);
     text-transform: uppercase;
     
     color:var(--txt-color-grey);
@@ -667,7 +682,7 @@ DM SIDEBAR
     font-style: var(--cerry-italic);
 
     font-weight:var(--weight-regular);
-    font-size:18px;
+    
 }
 
 /* ========================================
@@ -882,6 +897,8 @@ MEMBER SIDEBAR
     background-color:rgba(255, 255, 255, 0.2);
     text-shadow:var(--txtshadow-tiny);
 }
+
+
 
 
 
