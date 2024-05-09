@@ -2,7 +2,7 @@
  * @name PlumCherry [ALPHA]
  * @author CerryTsuki
  * @version ALPHA-2024.05.09
- * @description A bright, Y2K-lite inspired theme for Discord. Tested with Vencord.
+ * @description A bright, Y2K-lite inspired theme for Discord. Set your theme to default dark!
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
@@ -575,7 +575,7 @@ SERVER SIDEBAR
     
 } .container__7e23c { border-radius:var(--default-radius);}
 /* server channel list */
-.theme-dark .container__7e23c {
+.container__7e23c {
     background: var(--bg-color); 
     border-radius:var(--default-radius);
     border:var(--cerry-border);
@@ -669,7 +669,7 @@ DM SIDEBAR
     box-shadow: var(--cerry-boxsh);
     background:var(--bg-color);}
 /* search bar */
-.searchBar__621ec { padding:0px 0px; height:60px;}
+.searchBar__621ec { padding:0px 0px; height:60px; box-shadow:0px 0px ;}
  .searchBar__621ec .searchBarComponent__8f95f {
     border-radius:var(--default-radius);
     border:var(--cerry-border);
@@ -681,7 +681,7 @@ DM SIDEBAR
     color:var(--txt-color-grey);
     font-family:var(--big-font);
     font-style: var(--cerry-italic);
-
+    font-size:1em;
     font-weight:var(--weight-regular);
     
 }
@@ -752,6 +752,7 @@ BOTTOM LEFT PANELS - VOICE AND PROFILE PANELS
     background:var(--bg-color);
     padding:12px;
     box-shadow: var(--cerry-boxsh);
+    border:var(--cerry-border);
     border-radius:var(--default-radius) var(--default-radius) 0 0px;
     
 }
