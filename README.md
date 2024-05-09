@@ -1,5 +1,5 @@
 # **PlumCherry**
-PlumCherry is a colorful and unique Discord theme, somewhat inspired by Y2K design. I made it for myself, but a lot of people wanted it, so here ya go!
+PlumCherry is a colorful and unique Discord theme, somewhat inspired by Y2K design. I made it for myself, but a lot of people wanted their hands on it, so there ya go i guess lol
 
 It's currently in a **Work in Progress** state, so a lot of things are currently not done or inconsistent with other elements.
 
