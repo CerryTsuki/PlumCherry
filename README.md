@@ -3,6 +3,8 @@ PlumCherry is a colorful and unique Discord theme, somewhat inspired by Y2K desi
 
 It's currently in a **Work in Progress** state, so a lot of things are currently not done or inconsistent with other elements.
 
+Currently only tested with Vencord, I don't know if this is compatible with BetterDiscord.
+
 ## Installation
 - Download the .css file and put it in your respective themes folder.
 - Go in `Settings` -> `Themes` and enable PlumCherry.
