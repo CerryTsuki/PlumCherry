@@ -16,7 +16,7 @@
                     2px 2px var(--shadow-color);
     --dropshadow: drop-shadow(2px 2px  var(--shadow-color));
 
-    --cerry-boxsh: 2px 2px var(--main-color); /* common box shadow used */
+    --cerry-boxsh: 2px 2px var(--shadow-color); /* common box shadow used */
     --cerry-boxsh-hover: 2px 2px var(--shadow-color-active); 
 
     --cerry-border: 1px solid var(--shadow-color); /* common border used */
