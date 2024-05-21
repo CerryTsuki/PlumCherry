@@ -7,4 +7,4 @@ Currently only tested with Vencord, I don't know if this is compatible with Bett
 
 ## Installation
 - [Download the theme](https://github.com/CerryTsuki/PlumCherry/releases) and put `PlumCherry.css` file in your respective themes folder.
-- Go in `Settings` -> `Themes` and enable PlumCherry.
+- In Discord, go in `User Settings` -> `Themes` and enable PlumCherry.
