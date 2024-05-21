@@ -6,5 +6,5 @@ It's currently in a **Work in Progress** state, so a lot of things are currently
 Currently only tested with Vencord, I don't know if this is compatible with BetterDiscord.
 
 ## Installation
-- Download the .css file and put it in your respective themes folder.
+- [Download the theme](https://github.com/CerryTsuki/PlumCherry/releases) and put `PlumCherry.css` file in your respective themes folder.
 - Go in `Settings` -> `Themes` and enable PlumCherry.
