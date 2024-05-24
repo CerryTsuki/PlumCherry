@@ -1,22 +1,20 @@
 /**
  * @name PlumCherry [ALPHA]
  * @author CerryTsuki
- * @version ALPHA-2024.05.21
+ * @version ALPHA-2024.05.24
  * @description A bright, Y2K-lite inspired theme for Discord. Set your theme to default dark!
  */
 
 @import url('https://raw.githubusercontent.com/CerryTsuki/PlumCherry/main/version/current.css');
-
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
 
 /* these are CSS variables, and as such use CSS values. if something's broken, make sure you don't have any typos in your values. */
 :root {
-    /* customizable variables */
+    /* custom variable defaults */
 
     /* fonts */
     --default-font: 					gg sans, sans-serif;
     --big-font: 						Sofia Sans Extra Condensed, sans-serif;
-
     --weight-regular:					400;
     --weight-bold:						800;
     --weight-thin:						200;
@@ -26,8 +24,11 @@
     --alt-color:        				rgb(76, 19, 109); /* preferably darker than main-color */
     --success-color:    				rgb(33, 228, 98);
     --danger-color:     				rgb(146, 12, 12);
+    
     --bg-color:         				rgba(20, 10, 25, 0.7);
     --bg-color-opaque:  				rgb(20, 10, 25);
+    --bg-color-mention:                 rgba(90, 50, 20, 0.7);
+    --bg-color-replying:                rgba(90, 20, 50, 0.7);
 
     --hover-color: 						rgb(255, 255, 255); 
     --active-color:     				rgba(255, 255, 255, 1);
@@ -38,7 +39,7 @@
     --txt-color-grey:   				rgba(166, 142, 175, 1);
     --link-color:       				rgb(0, 0, 255);
 
-    --shadow-color:        			rgb(0, 0, 0);
+    --shadow-color:        			    rgb(0, 0, 0);
     --shadow-color-active: 				rgb(255, 255, 255);
 
     /* font adjustments */
@@ -51,30 +52,32 @@
     --date-fontsize:        			12px;
     --date-weight:          			var(--weight-bold);
 
-    /* do you want headers to be italicized? */
+    /* do you want headers to be italicized?*/
     --cerry-italic:         italic;
+
+    /* make this variable empty if you want fonts to be dark when on lighter backgrounds*/
+    --override-dark-text:       var(--txt-color); /* TODO may delete this if too niche */
 
     /* element adjustments */
         /* username box in messages */
         --username-box-bg:          	var(--main-color);
         --username-box-shadow:      	var(--cerry-boxsh);
-        --username-box-width:      	700px;
-        --username-box-txtoffset:   	8px;
-        --username-box-extendleft:  	26px; /* the box is shifted a bit to the left in order to look like it comes from behind the avatar*/
+        --username-box-extendleft:  	42px; /* the box is shifted a bit to the left in order to look like it comes from behind the avatar*/
         --avatar-border:            	3px solid var(--main-color);
-        --avatar-size:              	48px;
+        --avatar-size:              	56px;
+        --avatar-bg:                 	var(--main-color);
 
 
     /* animation speed for some interactions */
-    --default-transition:      		0.2s;
+    --default-transition:      		    0.2s;
 
 
 	/* background */
-    --backdrop:            			linear-gradient(135deg, rgba(187,60,123,1) 0%, rgba(47,19,126,1) 100%);
+    --backdrop:            			    linear-gradient(135deg, rgba(187,60,123,1) 0%, rgba(47,19,126,1) 100%);
     --backdrop-position:    			center;
     --backdrop-attachment:  			fixed;
     --backdrop-repeat:      			repeat;
-    --backdrop-size: ;
+    --backdrop-size:                    auto;
     --backdrop-filter:      			blur(2px); /* unused for now */
 
     --default-radius:       			20px;
@@ -100,21 +103,13 @@
 										
     --dropshadow: 						drop-shadow(2px 2px  var(--shadow-color));
 
-    --cerry-boxsh: 						2px 2px var(--shadow-color);
-    --cerry-boxsh-hover: 				2px 2px var(--shadow-color-active); 
+    --cerry-boxsh-width:                2px;
+    --cerry-boxsh: 						var(--cerry-boxsh-width) var(--cerry-boxsh-width) var(--shadow-color);
+    --cerry-boxsh-hover: 				var(--cerry-boxsh-width) var(--cerry-boxsh-width) var(--shadow-color-active); 
 
-    --cerry-border: 					1px solid var(--shadow-color);
-    --cerry-border-hover: 				1px solid var(--shadow-color-active);
+    --cerry-border-width:               1px;
+    --cerry-border: 					var(--cerry-border-width) solid var(--shadow-color);
+    --cerry-border-hover: 				var(--cerry-border-width) solid var(--shadow-color-active);
 
     --cerry-divider:					1px solid var(--alt-color);
-
-	/* unused for now */
-    --header-pos-offset:0px; 
-
-    /* discord defaults override (changing these might break the theme)*/
-    --background-secondary:var(--bg-color); --bg-overlay-chat:transparent; 
-    --interactive-hover: var(--hover-color); --interactive-active: var(--active-color); --interactive-normal:var(--inactive-color);
-    --invisible : rgba(0,0,0,0);
-    --brand-experiment:var(--main-color);
-    --input-background:var(--bg-color);
 }
