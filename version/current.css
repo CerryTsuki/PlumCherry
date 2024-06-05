@@ -1,7 +1,7 @@
 /**
  * @name PlumCherry [ALPHA]
  * @author CerryTsuki
- * @version ALPHA-2024.05.24
+ * @version ALPHA-2024.06.05
  * @description A bright, Y2K-lite inspired theme for Discord. Set your theme to default dark!
  */
 
@@ -20,23 +20,24 @@
 
     /* colors */
     --main-color:       				rgb(228, 33, 98); /* pick a nice bright color! */
-    --alt-color:        				rgb(76, 19, 109); /* preferably darker than main-color */
+    --alt-color:        				rgb(49, 7, 163); /* preferably darker than main-color */
     --success-color:    				rgb(33, 228, 98);
-    --danger-color:     				rgb(146, 12, 12);
+    --danger-color:     				rgb(245, 164, 15);
     
     --bg-color:         				rgba(20, 10, 25, 0.7);
-    --bg-color-opaque:  				rgb(20, 10, 25);
+    --bg-color-opaque:  				rgba(20, 10, 25, 0.975);
     --bg-color-mention:                 rgba(90, 50, 20, 0.7);
     --bg-color-replying:                rgba(90, 20, 50, 0.7);
+    --bg-color-success:                 rgba(16, 110, 66, 0.7);
 
     --hover-color: 						rgb(255, 255, 255); 
     --active-color:     				rgba(255, 255, 255, 1);
     --inactive-color:   				rgb(255, 255, 255);
 
     --txt-color:        				rgba(255, 255, 255, 1);
-    --txt-color-alt:    				rgb(216, 185, 200);
-    --txt-color-grey:   				rgba(166, 142, 175, 1);
-    --link-color:       				rgb(0, 0, 255);
+    --txt-color-alt:    				rgb(193, 185, 216); /* unused */
+    --txt-color-grey:   				rgb(142, 169, 190);
+    --link-color:       				rgb(0, 0, 255); /* unused */
 
     --shadow-color:        			    rgb(0, 0, 0);
     --shadow-color-active: 				rgb(255, 255, 255);
@@ -46,7 +47,7 @@
     --username-fontsize:    			24px;
     --username-weight:      			var(--weight-bold);
 
-    --date-y-offset:        			-2px;
+    --date-y-offset:        		    -2px;
     --date-x-offset:   					0px;
     --date-fontsize:        			12px;
     --date-weight:          			var(--weight-bold);
@@ -116,6 +117,8 @@
 
     --cerry-divider:					1px solid var(--alt-color);
 
+    --popout-boxsh:                     4px 4px 4px rgba(0, 0, 0, 0.5);
+
     /* discord defaults override (changing these might break the theme)*/
     --background-secondary:var(--bg-color); --bg-overlay-chat:transparent; 
     --interactive-hover: var(--hover-color); --interactive-active: var(--active-color); --interactive-normal:var(--inactive-color);
@@ -124,6 +127,7 @@
     --input-background:var(--bg-color);
     --scrollbar-auto-scrollbar-color-thumb: var(--main-color); --scrollbar-auto-thumb:var(--main-color); --scrollbar-thin-thumb:var(--main-color);
     --scrollbar-auto-scrollbar-color-track:var(--bg-color); --scrollbar-auto-track:var(--bg-color); --scrollbar-thin-track:var(--bg-color);
+    --info-warning-foreground:var(--danger-color);
 }
 
 /* WARNING VERY SCARY BAD CSS FORMATTING AND TERRIBLE CSS PRACTICES BELOW. EDIT AT YOUR OWN RISK */
@@ -177,7 +181,18 @@ body,button,input,select,textarea,::placeholder{
     text-shadow: var(--txtshadow);
 }
 
-
+/* tooltip popout */
+.theme-dark .listItemTooltip_e19493, .theme-light .listItemTooltip_e19493, .theme-dark .tooltipPrimary__51b23, .theme-light .tooltipPrimary__51b23 {
+    border-radius:var(--default-radius);
+    border:var(--cerry-border);
+    box-shadow: var(--cerry-boxsh), var(--popout-boxsh);
+    background:var(--alt-color);
+}
+.theme-dark .tooltipPrimary__51b23 .tooltipPointer_f7411c, .theme-light .tooltipPrimary__51b23 .tooltipPointer_f7411c {
+    border-top-color:var(--alt-color);
+    border-width:10px;
+    margin-top:-10px;
+}
 /*
 =======================
 UNIVERSAL / UNIQUE
@@ -218,6 +233,8 @@ SERVER BROWSER / GUILDS
     background-color:var(--main-color);
 }
 
+
+
 /*
 ================================
 CHAT STUFF
@@ -247,7 +264,7 @@ CHAT STUFF
 
 
 /* divider (big) */
-.divider__855e3 {border-bottom:0.5 solid var(--main-color); top:4px}
+.divider__855e3 {border-bottom:0.5 solid var(--main-color);}
 .divider__01aed .content__7191e {
     color:white; 
     font-family:var(--big-font);
@@ -256,7 +273,7 @@ CHAT STUFF
     font-weight:var(--weight-bold);
     font-style: var(--cerry-italic);
     justify-content: flex-start;
-    
+    box-shadow: var(--cerry-boxsh);;
     width:100%;
     margin: 0 0 0 16px;
 
@@ -276,20 +293,22 @@ CHAT STUFF
 MESSAGES
 =============*/
 
-/* TODO new message look */
-
-.cozy_f5c119.wrapper_a62503 {
-    margin-right:16px; /* --message-offset-right */
+/* messages */
+.message_ccca67 {
     background: var(--bg-color); 
-    box-shadow: var(--cerry-boxsh-width) 0px var(--shadow-color);
-    padding-left:32px;
     margin-left:40px;
-    overflow:visible;
     border:var(--cerry-border);
     border-bottom:0px; border-top:0px;
+    box-shadow: var(--cerry-boxsh-width) 0px var(--shadow-color);
+        
+} .cozy_f5c119.wrapper_a62503 {
+    margin-right:16px; /* --message-offset-right */
+    padding-left:32px;
+    overflow:visible;
     padding-right:0;
     padding-bottom:0px;
 }
+
 .messageListItem__050f9 .groupStart__7b93c, .backgroundFlash__28f42.groupStart__7b93c, .quotedChatMessage_d0497b .groupStart__7b93c {
 	border-radius: var(--br-t);
     
@@ -312,7 +331,7 @@ MESSAGES
 	border-radius:var(--br-t);
     border-top:var(--cerry-border);
     box-shadow: var(--cerry-boxsh-width) 0px var(--shadow-color);
-} .groupStart__7b93c .messageContent_abea64 {padding-top:4px;}
+} .groupStart__7b93c .contents_d3ae0d .messageContent_abea64 {padding-top:4px;}
 /* bottom message */
 .messageListItem__050f9:has(+ .messageListItem__050f9 .groupStart__7b93c, + .divider__01aed, + .scrollerSpacer__6b1b6, + .backgroundFlash__28f42 .groupStart__7b93c) .message_ccca67,
 .backgroundFlash__28f42:has(+ .messageListItem__050f9 .groupStart__7b93c, + .divider__01aed, + .scrollerSpacer__6b1b6, + .backgroundFlash__28f42 .groupStart__7b93c) .message_ccca67 {
@@ -329,11 +348,12 @@ MESSAGES
 .backgroundFlash__28f42:has( + .messageListItem__050f9 .groupStart__7b93c, + .divider__01aed, + .scrollerSpacer__6b1b6, + .backgroundFlash__28f42 .groupStart__7b93c) .groupStart__7b93c {
 	border-radius:var(--default-radius);
     box-shadow: 2px 2px var(--shadow-color);
+    border-top:var(--cerry-border);
 }
 /* reply */
 /* TODO change this for each message group spacing option */
-.messageListItem__050f9 .message_ccca67[aria-labelledby*="reply"]{
-    margin-top:36px;
+.messageListItem__050f9:has(.repliedMessage__636d2 ){
+    margin-top:32px;
 }
 .cozy_f5c119 .repliedMessage__636d2 { margin-top:-28px; padding-bottom:2px;}
 
@@ -344,11 +364,25 @@ MESSAGES
     border-color:var(--main-color);
 }
 
+/* system message specifics, currently call only */
+.isSystemMessage__0f7c5 {
+    background: var(--alt-color); border-color:var(--alt-color) !important; 
+    padding-left:var(--avatar-size) !important;
+    margin-left:0 !important;
+}
+.icon__467d5 .iconSize__89aca {
+
+}
+
+.backgroundFlash__28f42 .groupStart__7b93c {
+    margin-top:auto !important;
+}
+
 /* borders for selected reply messages or where you were mentioned*/
 .mentioned_fa6fd2:before {background:transparent;}
-.mentioned_fa6fd2 {border-color:var(--info-warning-foreground) !important; background:var(--bg-color-mention) !important;}
+.mentioned_fa6fd2:not(.isSystemMessage__0f7c5) {border-color:var(--danger-color) !important; background:var(--bg-color-mention);}
 .replying__38514:before {background:transparent;}
-.replying__38514 {border-color:var(--main-color) !important;  background:var(--bg-color-replying) !important;}
+.replying__38514 {border-color:var(--main-color) !important;  background:var(--bg-color-replying);}
 
 /* ugly fixes for reply posts */
 .cozy_f5c119 .contents_d3ae0d 
@@ -365,10 +399,10 @@ MESSAGES
 }
 /* avatar nitro thingy decoration frame */
 .avatarDecoration__8a0c2 {
-    left:-38px;
-    top:-2px;
-    width:60px;
-    height:60px;
+    left:-41px;
+    top:-1px;
+    width:64px;
+    height:64px;
 }
 /* container for username + timestamp */
 .header__6a14d {
@@ -377,14 +411,19 @@ MESSAGES
     padding-right:60px; /* --message-offset-right - 4px ?*/
     right:var(--username-box-extendleft);
     min-width:100%;
-    text-indent:calc(var(--username-box-extendleft) - 1.25 * var(--username-box-extendleft));
+    text-indent:calc(var(--username-box-extendleft) - 1.20 * var(--username-box-extendleft));
     border-radius:var(--br-r);
     box-shadow:var(--username-box-shadow);  
-    padding-bottom:2px;
+    padding-bottom:2px; padding-top:2px;
     margin-top:-4px;
 
 } 
 
+/* vencord message logger override */
+.content__4b45f .messagelogger-deleted {
+     filter :brightness(0.5) !important;
+     background-color:transparent !important;
+}
 
 
 
@@ -452,7 +491,6 @@ h3 > .timestamp_c79dd2 {
     max-height:1.5em;
     overflow:visible;
     padding-bottom:2px;
-    
 }
 /* reply username */
 .repliedMessage__636d2 .username__0b0e7 {
@@ -475,7 +513,10 @@ h3 > .timestamp_c79dd2 {
     z-index:1;
     border:1px solid var(--main-color);
 }
-
+/* reply message */
+.repliedMessage__636d2 .repliedTextPreview__1a8a4 .repliedTextContent_b12fe1, .threadMessageAccessory_ef0459 .threadMessageAccessoryPreview__58ff3 .threadMessageAccessoryContent__42312 {
+    
+}
 /* chat timestamp color bypass */
 .message_ccca67 .timestamp_c79dd2 {
     color:white;
@@ -536,7 +577,7 @@ h3 > .timestamp_c79dd2 {
 MESSAGE EMBEDS
 ================= */
 /* audio player */
-.theme-dark .wrapperAudio__178e9 {
+.theme-dark .wrapperAudio__178e9, .theme-light .wrapperAudio__178e9 {
     background:var(--bg-color);
     border-radius: var(--default-radius);
     border:var(--cerry-border);
@@ -570,7 +611,7 @@ INPUT
 /* "you're viewing older messages" bar */
 .jumpToPresentBar__69174 {
     border-radius:var(--default-radius);
-    margin-bottom:24px;
+    margin-bottom:12px;
     padding-bottom:0;
     border:var(--cerry-border);
     box-shadow: var(--cerry-boxsh);
@@ -595,7 +636,7 @@ INPUT
 
 /* discord overrides */
 .channelTextArea_c2094b { background-color:transparent;}
-.theme-dark .form_d8a4a1:before, .theme-dark .form_d8a4a1:after{background:transparent;}
+.theme-dark .form_d8a4a1:before, .theme-dark .form_d8a4a1:after, .theme-light .form_d8a4a1:before, .theme-light .form_d8a4a1:after{background:transparent;}
 
 .themedBackground__3a4c0{background:var(--alt-color); border-radius: var(--default-radius); border:var(--cerry-border); box-shadow: var(--cerry-boxsh);}
 /* placeholder text before you start typing */
@@ -630,7 +671,7 @@ TOP BAR
     --__header-bar-background: transparent;
     
 }
-.theme-dark .themed_b152d4 {background:transparent;}
+.theme-dark .themed_b152d4, .theme-light .themed_b152d4 {background:transparent;}
 /* channel name wrapper */
 .children_cde9af {
     border-radius: var(--default-radius);
@@ -666,7 +707,7 @@ TOP BAR
 }
 
 /*toolbar */
-.toolbar__62fb5{ position:relative;}
+.toolbar__62fb5{ position:relative; margin-left:16px;}
 .toolbar__62fb5 > .iconWrapper_de6cd1, .recentsIcon_a585d7 > .iconWrapper_de6cd1, .anchor_c8ddc0  > .iconWrapper_de6cd1 {
     background:var(--alt-color);
     border:var(--cerry-border);
@@ -749,14 +790,15 @@ SERVER SIDEBAR
     border-radius:var(--default-radius);
     overflow:hidden;
 }
-/* server name */
+/* server name */ /* TODO this affects "active now" usernames */
 .text-md-semibold__8664f {
     font-family: var(--big-font);
     font-style: var(--cerry-italic);
     font-size:26px;
     width:100%;
     text-shadow: var(--txtshadow);
-}
+} 
+
 
 /* container for server name, includes icons and dropdown arrow */
 .bannerVisible_ef30fe .headerContent__6fcc7{
@@ -1225,10 +1267,16 @@ FRIENDS LIST
     transition:var(--default-transition);
     background-color:var(--bg-color);
 } .itemCard_b64118:hover  {box-shadow: var(--cerry-boxsh-hover); border:var(--cerry-border-hover); }
-.theme-dark .outer_a41cf3.interactive__46c44:hover, .theme-dark .outer_a41cf3.active__76f42 {background-color:var(--main-color)}
+.theme-dark .outer_a41cf3.interactive__46c44:hover, .theme-dark .outer_a41cf3.active__76f42
+.theme-light .outer_a41cf3.interactive__46c44:hover, .theme-light .outer_a41cf3.active__76f42 {background-color:var(--main-color)}
 .itemCard_b64118 .text-md-semibold__8664f { line-height:1em;}
+.theme-dark .inset__61d5b, .theme-light .inset__61d5b {background:transparent;}
+.section__253ec:only-child {
+    border-radius: var(--default-radius);
+}
 /* it's quiet for now */
 .emptyCard__204d9 {background: var(--bg-color);border:var(--cerry-border); box-shadow: var(--cerry-boxsh); border-radius:var(--default-radius);}
+
 
 
 /*
