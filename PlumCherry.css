@@ -1,12 +1,12 @@
 /**
  * @name PlumCherry [ALPHA]
  * @author CerryTsuki
- * @version ALPHA-2024.05.24
+ * @version ALPHA-2024.06.26
  * @description A bright, Y2K-lite inspired theme for Discord. Set your theme to default dark!
  */
 
-@import url('https://raw.githubusercontent.com/CerryTsuki/PlumCherry/main/version/current.css');
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* these are CSS variables, and as such use CSS values. if something's broken, make sure you don't have any typos in your values. */
 :root {
@@ -14,30 +14,31 @@
 
     /* fonts */
     --default-font: 					gg sans, sans-serif;
-    --big-font: 						Sofia Sans Extra Condensed, sans-serif;
+    --big-font: 						Barlow Condensed, Noto Sans JP, sans-serif;
     --weight-regular:					400;
-    --weight-bold:						800;
+    --weight-bold:						700;
     --weight-thin:						200;
 
     /* colors */
     --main-color:       				rgb(228, 33, 98); /* pick a nice bright color! */
-    --alt-color:        				rgb(76, 19, 109); /* preferably darker than main-color */
+    --alt-color:        				rgb(49, 7, 163); /* preferably darker than main-color */
     --success-color:    				rgb(33, 228, 98);
-    --danger-color:     				rgb(146, 12, 12);
+    --danger-color:     				rgb(245, 164, 15);
     
     --bg-color:         				rgba(20, 10, 25, 0.7);
-    --bg-color-opaque:  				rgb(20, 10, 25);
+    --bg-color-opaque:  				rgba(20, 10, 25, 0.975);
     --bg-color-mention:                 rgba(90, 50, 20, 0.7);
     --bg-color-replying:                rgba(90, 20, 50, 0.7);
+    --bg-color-success:                 rgba(16, 110, 66, 0.7);
 
     --hover-color: 						rgb(255, 255, 255); 
     --active-color:     				rgba(255, 255, 255, 1);
     --inactive-color:   				rgb(255, 255, 255);
 
     --txt-color:        				rgba(255, 255, 255, 1);
-    --txt-color-alt:    				rgb(216, 185, 200);
-    --txt-color-grey:   				rgba(166, 142, 175, 1);
-    --link-color:       				rgb(0, 0, 255);
+    --txt-color-alt:    				rgb(193, 185, 216); /* unused */
+    --txt-color-grey:   				rgb(190, 145, 190);
+    --link-color:       				rgb(0, 0, 255); /* unused */
 
     --shadow-color:        			    rgb(0, 0, 0);
     --shadow-color-active: 				rgb(255, 255, 255);
@@ -47,10 +48,10 @@
     --username-fontsize:    			24px;
     --username-weight:      			var(--weight-bold);
 
-    --date-y-offset:        			-2px;
+    --date-y-offset:        		    -2px;
     --date-x-offset:   					0px;
     --date-fontsize:        			12px;
-    --date-weight:          			var(--weight-bold);
+    --date-weight:          			var(--weight-regular);
 
     /* do you want headers to be italicized?*/
     --cerry-italic:         italic;
@@ -62,10 +63,13 @@
         /* username box in messages */
         --username-box-bg:          	var(--main-color);
         --username-box-shadow:      	var(--cerry-boxsh);
-        --username-box-extendleft:  	42px; /* the box is shifted a bit to the left in order to look like it comes from behind the avatar*/
         --avatar-border:            	3px solid var(--main-color);
         --avatar-size:              	56px;
-        --avatar-bg:                 	var(--main-color);
+        --avatar-bg:                    var(--main-color);
+            /* deprecated
+            --username-box-width:      	700px;
+            --username-box-txtoffset:   	24px; 
+            */
 
 
     /* animation speed for some interactions */
@@ -112,4 +116,6 @@
     --cerry-border-hover: 				var(--cerry-border-width) solid var(--shadow-color-active);
 
     --cerry-divider:					1px solid var(--alt-color);
+
+    --popout-boxsh:                     4px 4px 4px rgba(0, 0, 0, 0.5);
 }
