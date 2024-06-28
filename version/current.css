@@ -312,6 +312,9 @@ MESSAGES
     padding-right:0;
     padding-bottom:0px;
 }
+.theme-dark.mouse-mode.full-motion .message_d5deea:hover, .theme-light.mouse-mode.full-motion .message_d5deea:hover { /* TODO this only works when the window isn't focused */
+    background:var(--bg-color-opaque);
+}
 
 .messageListItem_d5deea .groupStart_d5deea, .backgroundFlash_d5deea.groupStart_d5deea, .quotedChatMessage_d0497b .groupStart_d5deea {
 	border-radius: var(--br-t);
