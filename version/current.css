@@ -269,8 +269,8 @@ CHAT STUFF
 
 
 /* divider (date) */
-.divider__855e3 {border-bottom:0.5 solid var(--main-color);}
-.divider_d5deea .content_fc5f50  {
+.divider_d5deea {border-bottom:0 solid transparent;}
+.divider_d5deea .content_c2654d  {
     color:white; 
     font-family:var(--big-font);
     text-shadow:var(--txtshadow);
