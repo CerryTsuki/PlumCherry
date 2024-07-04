@@ -414,11 +414,11 @@ img.clickable_f9f2ca.avatar_f9f2ca {
     box-sizing:content-box;
 }
 /* avatar nitro thingy decoration frame */
-.avatarDecoration__8a0c2 {
-    left:-41px;
-    top:-1px;
-    width:64px;
-    height:64px;
+.avatarDecoration_f9f2ca {
+    left:-35px;
+    top:-3px;
+    width:68px;
+    height:68px;
 }
 /* container for username + timestamp */
 .cozy_f9f2ca .header_f9f2ca {
