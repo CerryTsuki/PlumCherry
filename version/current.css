@@ -65,7 +65,6 @@
         --username-box-bg:          	var(--main-color);
         --username-box-shadow:      	var(--cerry-boxsh);
         --avatar-border:            	3px solid var(--main-color);
-        --avatar-size:              	56px;
         --avatar-bg:                    var(--main-color);
             /* deprecated
             --username-box-width:      	700px;
@@ -404,8 +403,8 @@ MESSAGES
 /* chat avatar */
 img.clickable_f9f2ca.avatar_f9f2ca {
     left:-32px;
-    width:var(--avatar-size);
-    height:var(--avatar-size);
+    width:56px;
+    height:56px;
     border:var(--avatar-border);
     background:var(--avatar-bg);
     border-radius:50%;
@@ -686,12 +685,12 @@ TOP BAR
     
 }
 /* top bar container #2 */
-.container_e44302 {
+.container_fc4f04 {
     --__header-bar-background: transparent;
 }
 
 /* channel name wrapper */
-.children_e44302 {
+.children_fc4f04 {
     border-radius: var(--br-l);
     background:var(--bg-color);
 
@@ -703,12 +702,12 @@ TOP BAR
 
 
 /* channel title */
-.titleWrapper_e44302  {
+.titleWrapper_fc4f04  {
 	font-family:var(--big-font);
     text-shadow: var(--txtshadow);
 
 }
-.container_e44302 .title_e44302{
+.container_fc4f04 .title_fc4f04{
     color:#fff;
     font-family:var(--big-font);
     text-shadow: var(--txtshadow);
@@ -717,7 +716,7 @@ TOP BAR
     font-style: var(--cerry-italic);
     padding:4px;
     font-weight:var(--weight-bold);
-} .icon_e44302 {color:var(--main-color)}
+} .icon_fc4f04 {color:var(--main-color)}
 
 /* user dm avatar */
 .avatar__7c789 {
@@ -726,8 +725,8 @@ TOP BAR
 }
 
 /*toolbar */
-.toolbar_e44302{ position:relative; margin-right:8px;}
-.toolbar_e44302 .iconWrapper_e44302, .recentsIcon_a585d7 .iconWrapper_e44302, anchor_af404b .iconWrapper_e44302 {
+.toolbar_fc4f04{ position:relative; margin-right:8px;}
+.toolbar_fc4f04 .iconWrapper_fc4f04, .recentsIcon_a585d7 .iconWrapper_fc4f04, anchor_af404b .iconWrapper_fc4f04 {
     background:var(--alt-color);
     border:var(--cerry-border);
     box-shadow: var(--cerry-boxsh);
@@ -737,24 +736,24 @@ TOP BAR
     width:min-50px;
     transition:var(--default-transition);
     
-} .clickable_e44302 .icon_e44302, .clickable_e44302 svg {color:var(--txt-color)}
-.toolbar_e44302 .iconWrapper_e44302:hover {
+} .clickable_fc4f04 .icon_fc4f04, .clickable_fc4f04 svg {color:var(--txt-color)}
+.toolbar_fc4f04 .iconWrapper_fc4f04:hover {
     border:var(--cerry-border-hover);
     box-shadow: var(--cerry-boxsh-hover);
     background:var(--main-color);
-} .iconWrapper_e44302:hover .icon_e44302, .iconWrapper_e44302:hover svg {color:var(--txt-color)}
-.iconWrapper_e44302 > svg {position:relative; top:1px; transition:0.3s}
+} .iconWrapper_fc4f04:hover .icon_fc4f04, .iconWrapper_fc4f04:hover svg {color:var(--txt-color)}
+.iconWrapper_fc4f04 > svg {position:relative; top:1px; transition:0.3s}
 
-a.anchor_af404b .iconWrapper_e44302  {border-radius:  0px var(--default-radius) var(--default-radius) 0px ; padding-right:12px;} /* show user profile*/
-/* .recentsIcon_a585d7 > .iconWrapper_e44302 {border-radius: var(--default-radius) 0px 0px var(--default-radius) ; padding-left:12px;} */
-.anchor_c8ddc0  .iconWrapper_e44302 {border-radius:  0px var(--default-radius) var(--default-radius) 0px ; padding-right:12px;} /* show user profile*/
+a.anchor_af404b .iconWrapper_fc4f04  {border-radius:  0px var(--default-radius) var(--default-radius) 0px ; padding-right:12px;} /* show user profile*/
+/* .recentsIcon_a585d7 > .iconWrapper_fc4f04 {border-radius: var(--default-radius) 0px 0px var(--default-radius) ; padding-left:12px;} */
+.anchor_c8ddc0  .iconWrapper_fc4f04 {border-radius:  0px var(--default-radius) var(--default-radius) 0px ; padding-right:12px;} /* show user profile*/
 /* active button */
 /*
 .selected__1fc53 .icon_ae0b42 {
     stroke:var(--shadow-color);
     filter:var(--dropshadow);
 } */ 
-.toolbar_e44302 > .selected__1fc53 {background:var(--main-color); border:1px solid black; box-sizing: border-box;}
+.toolbar_fc4f04 > .selected__1fc53 {background:var(--main-color); border:1px solid black; box-sizing: border-box;}
 
 /* inbox icon red dot thingy */
 .iconBadge__20a6b {right:8px; bottom:6px;}
