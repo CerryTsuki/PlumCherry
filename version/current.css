@@ -1175,7 +1175,7 @@ PROFILE PANEL
 
 .messageInputContainer_a93946 {border:0px;}
 .input_f27786.focused__86d46, .input_f27786:focus {border-color:var(--hover-color)}
-
+.body_b07019{padding-top:6px; margin-top:-6px;}
 .userText_c26b46 .defaultColor__8610e, .userText_c26b46 .userTagUsername_c32acf .userTagUsernameBase__2bd24, .clickableUsername_c32acf h1 {
     color:var(--override-dark-text);
 }
