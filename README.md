@@ -1,7 +1,9 @@
-# **PlumCherry**
-PlumCherry is a colorful and unique Discord theme, somewhat inspired by Y2K design. I made it for myself, but a lot of people wanted their hands on it, so there ya go i guess lol
+<sub>quick forenote, discord changed their theme recently and seems to be breaking stuff as i fix it and unfortunately kneecapped my motivation to work on this. i'll try my best to fix it on my own but i'm busy with other projects.</sub>
 
-It's currently in a **Work in Progress** state, so a lot of things are currently not done or inconsistent with other elements.
+# **PlumCherry**
+PlumCherry is a colorful and unique Discord theme inspired by Y2K design. I made it for myself, but a lot of people wanted their hands on it, so there ya go i guess lol
+
+It's currently in a **Work in Progress** state, which means that some things may change drastically, and your custom theme may not be compatible anymore.
 
 Fully compatible with [Vencord](https://vencord.dev/), also compatible with [BetterDiscord](https://betterdiscord.app/).
 
