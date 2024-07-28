@@ -1,0 +1,120 @@
+/**
+ * @name PlumCherry - Disco
+ * @author CerryTsuki
+ * @version ALPHA-2024.06.19
+ * @description PlumCherry with Discord's brand colors.
+ */
+
+@import url('https://raw.githubusercontent.com/CerryTsuki/PlumCherry/main/version/current.css')
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* these are CSS variables, and as such use CSS values. if something's broken, make sure you don't have any typos in your values. */
+:root {
+    /* custom variable defaults */
+
+    /* fonts */
+    --default-font: 					gg sans, sans-serif;
+    --big-font: 						Barlow Condensed, Noto Sans JP, gg sans, sans-serif;
+    --weight-regular:					400;
+    --weight-bold:						700;
+    --weight-thin:						200;
+
+    /* colors */
+    --main-color:       				rgb(88, 101, 242); /* pick a nice bright color! */
+    --alt-color:        				rgb(13, 25, 148); /* preferably darker than main-color */
+    --success-color:    				rgb(33, 228, 98);
+    --danger-color:     				rgb(245, 164, 15);
+    
+    --bg-color:         				rgba(44, 47, 51, 0.6);      /* color for the bg of most elements */
+    --bg-color-opaque:  				rgba(44, 47, 51, 0.975);
+    --bg-color-mention:                 rgba(90, 50, 20, 0.7);
+    --bg-color-replying:                rgba(90, 20, 50, 0.7);  
+    --bg-color-success:                 rgba(16, 110, 66, 0.7);
+
+    --hover-color: 						rgb(255, 255, 255); 
+    --active-color:     				rgba(255, 255, 255, 1);
+    --inactive-color:   				rgb(255, 255, 255);
+
+    --txt-color:        				rgba(255, 255, 255, 1);
+    --txt-color-alt:    				rgb(193, 185, 216); /* unused */
+    --txt-color-grey:   				rgb(145, 161, 190);
+    --link-color:       				rgb(0, 0, 255); /* unused */
+
+    --shadow-color:        			    rgb(0, 0, 0);
+    --shadow-color-active: 				rgb(255, 255, 255);
+
+    /* font adjustments */
+    --username-fontsize:    			24px;
+    --username-weight:      			var(--weight-bold);
+
+    --date-y-offset:        		    -2px;
+    --date-x-offset:   					0px;
+    --date-fontsize:        			12px;
+    --date-weight:          			var(--weight-regular);
+
+    /* do you want headers to be italicized?*/
+    --cerry-italic:         italic;
+
+    /* make this variable empty if you want fonts to be dark when on lighter backgrounds*/
+    --override-dark-text:       var(--txt-color); /* TODO may delete this if too niche */
+
+    /* element adjustments */
+        /* username box in messages */
+        --username-box-bg:          	var(--main-color);
+        --username-box-shadow:      	var(--cerry-boxsh);
+        --avatar-border:            	3px solid var(--main-color);
+        --avatar-size:              	56px; /* i recommend keeping it to 56px as it can break the header */
+        --avatar-bg:                    var(--main-color);
+
+
+    /* animation speed for some interactions */
+    --default-transition:      		    0.2s;
+
+
+	/* background */
+    --backdrop:            			    linear-gradient(135deg, rgb(45, 77, 134) 0%, rgb(33, 23, 56) 70%);
+    --backdrop-position:    			center;
+    --backdrop-attachment:  			fixed;
+    --backdrop-repeat:      			repeat;
+    --backdrop-size:                    auto;
+    --backdrop-filter:      			blur(2px); /* unused for now */
+
+    /* radius of the corners of most elements */
+    --default-radius:       			5px;
+
+    /* border radius but for some corners (Left Right Top Bottom) */
+    --br-l: 							var(--default-radius) 0 0 var(--default-radius);
+    --br-r: 							0 var(--default-radius) var(--default-radius) 0;
+    --br-t: 							var(--default-radius) var(--default-radius) 0 0;
+    --br-b: 							0 0 var(--default-radius) var(--default-radius);
+
+	/* other variables */
+    --txtshadow:      					1px 1px var(--shadow-color), 
+										-1px 1px var(--shadow-color), 
+										-1px -1px var(--shadow-color), 
+										1px -1px var(--shadow-color), 
+										2px 2px var(--shadow-color), 
+										3px 3px var(--shadow-color);
+										
+    --txtshadow-tiny: 					1px 1px var(--shadow-color), 
+										-1px 1px var(--shadow-color), 
+										-1px -1px var(--shadow-color), 
+										1px -1px var(--shadow-color),
+										2px 2px var(--shadow-color);
+										
+    --dropshadow: 						drop-shadow(2px 2px  var(--shadow-color));
+
+    --cerry-boxsh-width:                2px;
+    --cerry-boxsh: 						var(--cerry-boxsh-width) var(--cerry-boxsh-width) var(--shadow-color);
+    --cerry-boxsh-hover: 				var(--cerry-boxsh-width) var(--cerry-boxsh-width) var(--shadow-color-active); 
+
+    --cerry-border-width:               2px;
+    --cerry-border: 					var(--cerry-border-width) solid var(--shadow-color);
+    --cerry-border-hover: 				var(--cerry-border-width) solid var(--shadow-color-active);
+
+    --cerry-divider:					1px solid var(--alt-color);
+
+    --popout-boxsh:                     4px 4px 4px rgba(0, 0, 0, 0.5);
+}
