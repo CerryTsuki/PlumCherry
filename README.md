@@ -1,4 +1,4 @@
-<sub>quick forenote, discord changed their theme recently and seems to be breaking stuff as i fix it and unfortunately kneecapped my motivation to work on this. i'll try my best to fix it on my own but i'm busy with other projects.</sub>
+<sub>quick forenote, discord changed their theme recently and seems to be breaking stuff as i fix it and unfortunately kneecapped my motivation to work on this. i'll try my best to fix it on my own but since i'm busy with other projects they'll be fairly slow.</sub>
 
 # **PlumCherry**
 PlumCherry is a colorful and unique Discord theme inspired by Y2K design. I made it for myself, but a lot of people wanted their hands on it, so there ya go i guess lol
