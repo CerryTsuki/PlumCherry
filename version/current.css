@@ -1020,13 +1020,13 @@ BOTTOM LEFT PANELS - VOICE AND PROFILE PANELS
 .avatarWrapper_b2ca13:hover { border-radius:var(--default-radius) var(--default-radius) 0 0; background: var(--main-color) !important; cursor:pointer;}
 
 /* buttons container */
-.container_b2ca13 div.flex_bba380 {
+.container_b2ca13 div.flex_dc333f {
     display:grid; grid-template-columns: repeat(auto-fit,minmax(0,1fr)); grid-gap:4px;
     min-width:auto; width:calc(100% + 2px); 
     padding:0px 8px; margin-top:4px;
 }
 /* buttons */
-.container_b2ca13 div.flex_bba380 button {
+.container_b2ca13 div.flex_dc333f button {
     background-color:var(--alt-color);
     border-radius: 0;
     height:28px;
@@ -1035,9 +1035,9 @@ BOTTOM LEFT PANELS - VOICE AND PROFILE PANELS
     border:var(--cerry-border);
     transition:var(--default-transition);
 } 
-.container_b2ca13 div.flex_bba380 button:hover {background-color:var(--main-color); border: var(--cerry-border-hover); box-shadow: var(--cerry-boxsh-hover);}
-.container_b2ca13 div.flex_bba380 button:first-child {border-radius: 0 0 0 var(--default-radius); }
-.container_b2ca13 div.flex_bba380 button:last-child {border-radius: 0 0 var(--default-radius) 0;}
+.container_b2ca13 div.flex_dc333f button:hover {background-color:var(--main-color); border: var(--cerry-border-hover); box-shadow: var(--cerry-boxsh-hover);}
+.container_b2ca13 div.flex_dc333f button:first-child {border-radius: 0 0 0 var(--default-radius); }
+.container_b2ca13 div.flex_dc333f button:last-child {border-radius: 0 0 var(--default-radius) 0;}
 
 
 
