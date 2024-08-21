@@ -135,8 +135,10 @@
 /* removes stupid monetization/aigen bullshit (on top in case people want these back) */
 .channelAppLauncher_df39bd {display:none;}
 button[aria-label="Send a gift"] { display: none; }
+/*
 button[aria-label="Open GIF picker"] { display: none; }
 button[aria-label="Open sticker picker"] { display: none; }
+*/
 button[aria-label="Start an Activity"] { display: none; }
 div[aria-label^="Add Super Reaction"] { display: none; }
 .channel_c91bad a[data-list-item-id="private-channels-uid_2287___nitro"] {display:none;} /* nitro */
