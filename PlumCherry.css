@@ -66,12 +66,12 @@
         --username-box-bg:          	var(--main-color);
         --username-box-shadow:      	var(--cerry-boxsh);
         --avatar-border:            	3px solid var(--main-color);
-        --avatar-size:              	56px;
+
         --avatar-bg:                    var(--main-color);
-            /* deprecated
+            /* deprecated */
+			--avatar-size:              	56px;
             --username-box-width:      	700px;
             --username-box-txtoffset:   	24px; 
-            */
 
 
     /* animation speed for some interactions */
