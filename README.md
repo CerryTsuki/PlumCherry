@@ -3,7 +3,8 @@
 # **PlumCherry**
 PlumCherry is a colorful and unique Discord theme inspired by Y2K design. I made it for myself, but a lot of people wanted their hands on it, so there ya go i guess lol
 
-It's currently in a **Work in Progress** state, which means that some things may change drastically, and your custom theme may not be compatible anymore.
+Unfortunately it's currently in a state of indefinite hiatus. I will provide fixes for existing elements if updates break them, but new elements will be added sporadically.
+Discord has been consistently updating their CSS and becoming a cluttered mess of menus, it's become difficult to find obscure menus and play CSS Whack-A-Mole everytime they change CSS class names.
 
 Fully compatible with [Vencord](https://vencord.dev/), also compatible with [BetterDiscord](https://betterdiscord.app/).
 
