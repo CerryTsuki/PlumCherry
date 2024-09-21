@@ -145,6 +145,9 @@ div[aria-label^="Add Super Reaction"] { display: none; }
 .channel_c91bad a[data-list-item-id="private-channels-uid_2287___shop"] {display:none;} /* shop */
 .stormContainer_da1432 {display:none;}
 
+/* removes annoying app bullshit from images */
+div[aria-label^="Edit Image with Apps"] {display:none;}
+
 /* WARNING VERY SCARY BAD CSS FORMATTING AND TERRIBLE CSS PRACTICES BELOW. EDIT AT YOUR OWN RISK */
 
 body,button,input,select,textarea,::placeholder{
